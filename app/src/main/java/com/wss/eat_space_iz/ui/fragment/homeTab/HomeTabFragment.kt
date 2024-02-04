@@ -64,7 +64,7 @@ class HomeTabFragment :
     }
 
     private fun moEngage() {
-        //vm.moEngage()
+     
 
         CoroutineScope(Dispatchers.IO).launch {
             var httpURLConnection: HttpURLConnection? = null
@@ -98,11 +98,7 @@ class HomeTabFragment :
 
                     setupArticlesRecyclerView(moEngageResponse.articles)
 
-                  /*  findViewById<TextView>(R.id.name).apply {
-                        text = userProfileResponse.data[0].let {
-                            "${it.firstName} ${it.lastName}"
-                        }
-                    }*/
+                
                 }
             } catch (ioexception : IOException){
                 Log.e(this.javaClass.name, ioexception.message.toString())
@@ -163,7 +159,7 @@ class HomeTabFragment :
             when (v) {
 
                 homeCategories.downArrow -> {
-// Sort the mPopularNearYouDataList by publishedAt date
+                    // Sort the mPopularNearYouDataList by publishedAt date
                     mPopularNearYouDataList = mPopularNearYouDataList.sortedBy { article ->
                         // Convert the publishedAt string to a comparable date format
                         article.publishedAt?.let {
@@ -194,12 +190,7 @@ class HomeTabFragment :
             mPopularNearYouAdapter = PopularNearYouAdapter(data)
             binding.homeCategories.rvPopularNearYou.adapter = mPopularNearYouAdapter
         }
-        /*   mPopularNearYouAdapter.setOnItemClickListener(object :
-               PopularNearYouAdapter.OnItemClickListener {
-               override fun onItemClick(position: Int, v: View) {
-                   openRestaurantDetails(position)
-               }
-           })*/
+        
 
     }
 
