@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        tools:context=".ui.fragment.profileTab.ProfileEditFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_color">
+
+        <include
+            android:id="@+id/profile_toolbar"
+            layout="@layout/profile_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/et_tittle_style"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_toolbar" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_name"
+            style="@style/OutlinedRoundedBox"
+            android:layout_marginTop="4dp"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="abc"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black_opacity_50" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_email"
+            style="@style/et_tittle_style"
+            android:layout_marginTop="24dp"
+            android:text="@string/email"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"
+            app:layout_constraintTop_toBottomOf="@+id/til_name" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_email"
+            style="@style/OutlinedRoundedBox"
+            android:layout_marginTop="4dp"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="abc@example.com"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black_opacity_50" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_mobile_number"
+            style="@style/et_tittle_style"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/mobile_number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_email" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp_country_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="1dp"
+            app:ccpDialog_allowSearch="true"
+            app:ccpDialog_backgroundColor="@color/white"
+            app:ccpDialog_cornerRadius="5dp"
+            app:ccpDialog_searchEditTextTint="@color/black"
+            app:ccpDialog_showFastScroller="true"
+            app:ccpDialog_textColor="@color/black"
+            app:ccp_contentColor="@color/black"
+            app:ccp_defaultLanguage="ENGLISH"
+            app:ccp_defaultNameCode="GB"
+            app:ccp_defaultPhoneCode="44"
+            app:ccp_flagBorderColor="@color/black"
+            app:ccp_padding="16dp"
+            app:ccp_showArrow="false"
+            app:ccp_showFlag="true"
+            app:ccp_showNameCode="false"
+            app:ccp_showPhoneCode="true"
+            app:ccp_textSize="16sp"
+            app:ccp_useFlagEmoji="true"
+            app:layout_constraintBottom_toBottomOf="@+id/til_mobile_number"
+            app:layout_constraintStart_toStartOf="@+id/til_mobile_number"
+            app:layout_constraintTop_toTopOf="@+id/til_mobile_number" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_mobile_number"
+            style="@style/OutlinedRoundedBox"
+            android:layout_marginTop="4dp"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mobile_number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_mobile_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/mobile_number_left_bg"
+                android:drawablePadding="84dp"
+                android:fontFamily="@font/gilroy_medium"
+                android:hint="45131 48566"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black_opacity_50" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save"
+            style="@style/black_btn_style"
+            android:layout_marginBottom="32dp"
+            android:text="@string/btn_save"
+            app:cornerRadius="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

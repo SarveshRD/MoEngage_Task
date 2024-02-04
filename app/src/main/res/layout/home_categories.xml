@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back4">
+
+        <TextView
+            android:id="@+id/tv_categories"
+            style="@style/home_horizontal_rv_header_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Good morning"
+            android:visibility="gone"
+            android:textColor="#7C96A5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/category_name"
+            style="@style/home_horizontal_rv_header_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_categories"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/down_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SORT"
+            android:fontFamily="@font/gilroy_bold"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_categories"/>
+
+        <com.db.williamchart.view.LineChartView
+            android:id="@+id/lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            app:chart_axis="none"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back2"
+            android:layout_marginRight="15dp"
+            app:chart_gridEffect="dotted"
+            app:chart_labelsColor="#0D47A1"
+            app:chart_labelsSize="10sp"
+            app:chart_lineColor="#FF3700B3"
+            app:chart_lineThickness="3dp"
+            app:chart_smoothLine="true"
+            app:layout_constraintTop_toBottomOf="@+id/category_name"
+            tools:layout_editor_absoluteX="0dp" />
+
+
+       <TextView
+             android:id="@+id/tv_categories_show_all"
+             android:text="@string/show_all"
+             android:visibility="gone"
+             style="@style/home_rv_show_all_text_style"
+             app:layout_constraintBottom_toBottomOf="@+id/tv_categories"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toTopOf="@+id/tv_categories" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category_name"
+            tools:itemCount="7"
+            tools:listitem="@layout/custom_categories_list_item_layout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_popular_near_you"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/down_arrow"
+            tools:ignore="MissingConstraints"
+            tools:itemCount="2"
+            tools:listitem="@layout/custom_popular_near_you_list_item_layout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

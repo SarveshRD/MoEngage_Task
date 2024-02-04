@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="8dp"
+        app:cardElevation="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcv_restaurant_img"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/food_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/restaurent_food_img_two" />
+
+
+                <!--app:layout_constraintEnd_toEndOf="parent"
+                android:scaleType="centerCrop"
+                   app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"-->
+
+
+
+                <TextView
+                    android:id="@+id/food_name"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginTop="170dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Carrot" />
+
+                <TextView
+                    android:id="@+id/food_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:text="40 KG" />
+
+                <Button
+                    android:id="@+id/bigButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginLeft="200dp"
+                    android:visibility="gone"
+                    android:text="0.4 BTC" />
+
+                <ImageView
+                    android:id="@+id/favorite_image"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:visibility="gone"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/favorite_un_selected_icon" />
+
+
+                <ImageView
+                    android:id="@+id/add_button"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:visibility="gone"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="120dp"
+                    app:srcCompat="@drawable/cart_plus_btn_icon" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!--
+                    <TextView
+                        android:id="@+id/tv_restaurant_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/mcv_restaurant_img"
+                        app:layout_constraintTop_toBottomOf="@+id/mcv_restaurant_img"
+                        tools:text="McDonals's" />
+
+                    <TextView
+                        android:id="@+id/tv_restaurant_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/restaurant_address"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_restaurant_name"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_restaurant_name"
+                        tools:text="Western Cuisine, London" />
+
+                    <TextView
+                        android:id="@+id/tv_restaurant_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/restaurants_rating_bg"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:text="4.5"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_restaurant_address"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_restaurant_address" />
+
+                    <ImageView
+                        android:id="@+id/iv_restaurant_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/mcv_restaurant_img"
+                        app:layout_constraintStart_toStartOf="@+id/mcv_restaurant_img"
+                        app:srcCompat="@drawable/restaurants_distance_icon" />
+
+                    <ImageView
+                        android:id="@+id/iv_restaurant_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_restaurant_time"
+                        app:srcCompat="@drawable/delivery_time_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_restaurant_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/restuarant_distance_time"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_restaurant_distance"
+                        app:layout_constraintStart_toEndOf="@+id/iv_restaurant_distance"
+                        app:layout_constraintTop_toTopOf="@+id/iv_restaurant_distance"
+                        tools:text="242m" />
+
+                    <TextView
+                        android:id="@+id/tv_restaurant_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/restuarant_distance_time"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_restaurant_time"
+                        app:layout_constraintEnd_toEndOf="@+id/mcv_restaurant_img"
+                        app:layout_constraintTop_toTopOf="@+id/iv_restaurant_time"
+                        tools:text="25 Min" />
+            -->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

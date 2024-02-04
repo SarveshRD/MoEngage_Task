@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/iv_mobile_number_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:srcCompat="@drawable/eat_space_iz_small_logo" />
+
+    <TextView
+        android:id="@+id/tv_mobile_number_tagline"
+        style="@style/sign_all_tagline_style"
+        android:layout_marginTop="32dp"
+        android:text="@string/mobile_number_tagline"
+        app:layout_constraintEnd_toEndOf="@+id/iv_mobile_number_logo"
+        app:layout_constraintStart_toStartOf="@+id/iv_mobile_number_logo"
+        app:layout_constraintTop_toBottomOf="@+id/iv_mobile_number_logo" />
+
+    <TextView
+        android:id="@+id/tv_mobile_number_discription"
+        style="@style/sign_all_discription_style"
+        android:layout_marginTop="24dp"
+        android:text="@string/mobile_number_discription"
+        app:layout_constraintEnd_toEndOf="@+id/tv_mobile_number_tagline"
+        app:layout_constraintStart_toStartOf="@+id/tv_mobile_number_tagline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mobile_number_tagline" />
+
+
+    <TextView
+        android:id="@+id/tv_mobile_number"
+        style="@style/et_tittle_style"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/mobile_number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mobile_number_discription" />
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp_country_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        app:ccpDialog_allowSearch="true"
+        app:ccpDialog_backgroundColor="@color/white"
+        app:ccpDialog_cornerRadius="5dp"
+        app:ccpDialog_searchEditTextTint="@color/black"
+        app:ccpDialog_showFastScroller="true"
+        app:ccpDialog_textColor="@color/black"
+        app:ccp_contentColor="@color/black"
+        app:ccp_defaultLanguage="ENGLISH"
+        app:ccp_defaultNameCode="GB"
+        app:ccp_defaultPhoneCode="44"
+        app:ccp_flagBorderColor="@color/black"
+        app:ccp_padding="16dp"
+        app:ccp_showArrow="false"
+        app:ccp_showFlag="true"
+        app:ccp_showNameCode="false"
+        app:ccp_showPhoneCode="true"
+        app:ccp_textSize="16sp"
+        app:ccp_useFlagEmoji="true"
+        app:layout_constraintBottom_toBottomOf="@+id/til_mobile_number"
+        app:layout_constraintStart_toStartOf="@+id/til_mobile_number"
+        app:layout_constraintTop_toTopOf="@+id/til_mobile_number" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_mobile_number"
+        style="@style/OutlinedRoundedBox"
+        android:layout_marginTop="4dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mobile_number">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/mobile_number_left_bg"
+            android:drawablePadding="84dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:hint="45131 48566"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black_opacity_50" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next"
+        style="@style/black_btn_style"
+        android:layout_marginBottom="32dp"
+        android:text="@string/btn_next"
+        app:cornerRadius="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

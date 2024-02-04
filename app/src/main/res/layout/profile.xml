@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_color">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="170dp"
+            android:elevation="8dp"
+            android:src="@drawable/dumyy_home_profile_img"
+            app:civ_border_color="@color/white"
+            app:civ_border_overlay="true"
+            app:civ_border_width="5dp"
+            app:civ_circle_background_color="@color/main_bg_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_profile_img_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="8dp"
+            android:src="@drawable/profile_image_edit_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/civ_profile"
+            app:layout_constraintEnd_toEndOf="@+id/civ_profile"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/civ_profile"
+            app:layout_constraintTop_toTopOf="@+id/civ_profile"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcv_profile"
+            style="@style/CustomProfieCardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/tv_profie_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Chris Martin" />
+
+                <TextView
+                    android:id="@+id/tv_mobile_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_profie_name"
+                    app:layout_constraintStart_toStartOf="@+id/tv_profie_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_profie_name"
+                    tools:text="+44 51834 54354  .  chris.martin@gmail.com" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_mobile_email"
+                    app:layout_constraintStart_toEndOf="@+id/tv_mobile_email"
+                    app:layout_constraintTop_toTopOf="@+id/tv_mobile_email"
+                    app:srcCompat="@drawable/profile_details_edit_icon" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcv_profile_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="40dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/civ_profile">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_profile_my_orders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/profie_terms_n_condition_icon" />
+
+
+                <TextView
+                    android:id="@+id/tv_profile_my_orders"
+                    style="@style/profile_section_text_style"
+                    android:text="@string/profile_my_orders"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_my_orders"
+                    app:layout_constraintStart_toEndOf="@+id/iv_profile_my_orders"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_my_orders" />
+
+                <ImageView
+                    android:id="@+id/iv_profile_my_orders_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_my_orders"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_my_orders"
+                    app:srcCompat="@drawable/profile_right_arrow_icon" />
+
+                <View
+                    android:id="@+id/divider_profile_my_orders"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_profile_my_orders" />
+
+
+                <ImageView
+                    android:id="@+id/iv_profile_my_addresses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_profile_my_orders"
+                    app:srcCompat="@drawable/profile_my_addresses_icon" />
+
+
+                <TextView
+                    android:id="@+id/tv_profile_my_addresses"
+                    style="@style/profile_section_text_style"
+                    android:text="@string/profile_my_addresses"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_my_addresses"
+                    app:layout_constraintStart_toEndOf="@+id/iv_profile_my_addresses"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_my_addresses" />
+
+                <ImageView
+                    android:id="@+id/iv_profile_my_addresses_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_my_addresses"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_my_addresses"
+                    app:srcCompat="@drawable/profile_right_arrow_icon" />
+
+                <View
+                    android:id="@+id/divider_profile_my_addresses"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_profile_my_addresses" />
+
+
+                <ImageView
+                    android:id="@+id/iv_profile_payment_methods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_profile_my_addresses"
+                    app:srcCompat="@drawable/profile_payment_methods_icon" />
+
+
+                <TextView
+                    android:id="@+id/tv_profile_payment_methods"
+                    style="@style/profile_section_text_style"
+                    android:text="@string/profile_payment_methods"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_payment_methods"
+                    app:layout_constraintStart_toEndOf="@+id/iv_profile_payment_methods"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_payment_methods" />
+
+                <ImageView
+                    android:id="@+id/iv_profile_payment_methods_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_payment_methods"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_payment_methods"
+                    app:srcCompat="@drawable/profile_right_arrow_icon" />
+
+                <View
+                    android:id="@+id/divider_profile_payment_methods"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_profile_payment_methods" />
+
+
+                <ImageView
+                    android:id="@+id/iv_profile_offers_deals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_profile_payment_methods"
+                    app:srcCompat="@drawable/profile_offer_deals_icon" />
+
+
+                <TextView
+                    android:id="@+id/tv_profile_offers_deals"
+                    style="@style/profile_section_text_style"
+                    android:text="@string/profile_offers_deals"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_offers_deals"
+                    app:layout_constraintStart_toEndOf="@+id/iv_profile_offers_deals"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_offers_deals" />
+
+                <ImageView
+                    android:id="@+id/iv_profile_offers_deals_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_offers_deals"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_offers_deals"
+                    app:srcCompat="@drawable/profile_right_arrow_icon" />
+
+                <View
+                    android:id="@+id/divider_profile_offers_deals"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_profile_offers_deals" />
+
+
+                <ImageView
+                    android:id="@+id/iv_profile_favourites_deals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_profile_offers_deals"
+                    app:srcCompat="@drawable/profile_favourites_icon" />
+
+
+                <TextView
+                    android:id="@+id/tv_profile_favourites_deals"
+                    style="@style/profile_section_text_style"
+                    android:text="@string/profile_favourites"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_favourites_deals"
+                    app:layout_constraintStart_toEndOf="@+id/iv_profile_favourites_deals"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_favourites_deals" />
+
+                <ImageView
+                    android:id="@+id/iv_profile_favourites_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_favourites_deals"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_favourites_deals"
+                    app:srcCompat="@drawable/profile_right_arrow_icon" />
+
+                <View
+                    android:id="@+id/divider_profile_favourites_deals"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_profile_favourites_deals" />
+
+
+                <ImageView
+                    android:id="@+id/iv_profile_help_supports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_profile_favourites_deals"
+                    app:srcCompat="@drawable/profile_help_support_icon" />
+
+
+                <TextView
+                    android:id="@+id/tv_profile_help_supports"
+                    style="@style/profile_section_text_style"
+                    android:text="@string/profile_help_supports"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_help_supports"
+                    app:layout_constraintStart_toEndOf="@+id/iv_profile_help_supports"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_help_supports" />
+
+                <ImageView
+                    android:id="@+id/iv_profile_help_supports_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_help_supports"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_help_supports"
+                    app:srcCompat="@drawable/profile_right_arrow_icon" />
+
+                <View
+                    android:id="@+id/divider_profile_help_supports_deals"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_profile_help_supports" />
+
+
+                <ImageView
+                    android:id="@+id/iv_profile_terms_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_profile_help_supports_deals"
+                    app:srcCompat="@drawable/profie_terms_n_condition_icon" />
+
+
+                <TextView
+                    android:id="@+id/tv_profile_terms_condition"
+                    style="@style/profile_section_text_style"
+                    android:text="@string/profile_terms_condition"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_terms_condition"
+                    app:layout_constraintStart_toEndOf="@+id/iv_profile_terms_condition"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_terms_condition" />
+
+                <ImageView
+                    android:id="@+id/iv_profile_terms_condition_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_terms_condition"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_terms_condition"
+                    app:srcCompat="@drawable/profile_right_arrow_icon" />
+
+                <View
+                    android:id="@+id/divider_profile_terms_condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_profile_terms_condition" />
+
+
+                <ImageView
+                    android:id="@+id/iv_profile_change_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_profile_terms_condition"
+                    app:srcCompat="@drawable/profile_change_password_icon" />
+
+
+                <TextView
+                    android:id="@+id/tv_profile_change_password"
+                    style="@style/profile_section_text_style"
+                    android:text="@string/profile_change_password"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_change_password"
+                    app:layout_constraintStart_toEndOf="@+id/iv_profile_change_password"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_change_password" />
+
+                <ImageView
+                    android:id="@+id/iv_profile_change_password_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_change_password"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_change_password"
+                    app:srcCompat="@drawable/profile_right_arrow_icon" />
+
+                <View
+                    android:id="@+id/divider_profile_change_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_profile_change_password" />
+
+
+                <ImageView
+                    android:id="@+id/iv_profile_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_profile_change_password"
+                    app:srcCompat="@drawable/profile_logout_icon" />
+
+
+                <TextView
+                    android:id="@+id/tv_profile_logout"
+                    style="@style/profile_section_text_style"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:text="@string/profile_logout"
+                    android:textColor="#F14336"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_logout"
+                    app:layout_constraintStart_toEndOf="@+id/iv_profile_logout"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_logout" />
+
+                <ImageView
+                    android:id="@+id/iv_profile_logout_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_logout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_logout"
+                    app:srcCompat="@drawable/profile_right_arrow_icon" />
+
+                <View
+                    android:id="@+id/divider_profile_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_profile_logout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

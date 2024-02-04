@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph.xml"
+    app:startDestination="@id/homeTabFragment">
+
+    <fragment
+        android:id="@+id/homeTabFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.homeTab.HomeTabFragment"
+        android:label="HomeTabFragment"
+        tools:layout="@layout/fragment_home_tab" >
+
+        <action
+            android:id="@+id/action_homeTabFragment_to_allRestaurantListFragment"
+            app:destination="@id/allRestaurantListFragment" />
+        <action
+            android:id="@+id/action_homeTabFragment_to_cartTabFragment"
+            app:destination="@id/cartTabFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchTabFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.searchTab.SearchTabFragment"
+        android:label="SearchTabFragment"
+        tools:layout="@layout/fragment_search_tab" >
+        <action
+            android:id="@+id/action_searchTabFragment_to_blogsTabFragment"
+            app:destination="@id/blogsTabFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartTabFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.cartTab.CartTabFragment"
+        android:label="CartTabFragment"
+        tools:layout="@layout/fragment_cart_tab" />
+    <fragment
+        android:id="@+id/blogsTabFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.blogsTab.BlogsTabFragment"
+        android:label="BlogsTabFragment"
+        tools:layout="@layout/fragment_blogs_tab" >
+        <action
+            android:id="@+id/action_blogsTabFragment_to_followerAndFollowingFragment"
+            app:destination="@id/followerAndFollowingFragment" />
+        <argument
+            android:name="userData"
+            app:argType="com.wss.eat_space_iz.data.networkModels.searchUser.Item" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileTabFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.profileTab.ProfileTabFragment"
+        android:label="ProfileTabFragment"
+        tools:layout="@layout/fragment_profile_tab" >
+        <action
+            android:id="@+id/action_profileTabFragment_to_myOrdersFragment"
+            app:destination="@id/myOrdersFragment" />
+        <action
+            android:id="@+id/action_profileTabFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_profileTabFragment_to_profileEditFragment"
+            app:destination="@id/profileEditFragment" />
+        <action
+            android:id="@+id/action_profileTabFragment_to_myAddressesFragment"
+            app:destination="@id/myAddressesFragment" />
+        <action
+            android:id="@+id/action_profileTabFragment_to_myFavouriteFragment"
+            app:destination="@id/myFavouriteFragment" />
+        <action
+            android:id="@+id/action_profileTabFragment_to_discountCodeFragment"
+            app:destination="@id/discountCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myOrdersFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.profileTab.MyOrdersFragment"
+        android:label="MyOrdersFragment"
+        tools:layout="@layout/fragment_my_orders"/>
+    <fragment
+        android:id="@+id/profileEditFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.profileTab.ProfileEditFragment"
+        android:label="ProfileEditFragment"
+        tools:layout="@layout/fragment_profile_edit">
+        <action
+            android:id="@+id/action_profileEditFragment_to_mobileOtpFragment"
+            app:destination="@id/mobileOtpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myFavouriteFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.profileTab.MyFavouriteFragment"
+        android:label="MyFavouriteFragment"
+        tools:layout="@layout/fragment_my_favourite"/>
+    <fragment
+        android:id="@+id/myAddressesFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.profileTab.MyAddressesFragment"
+        android:label="MyAddressesFragment"
+        tools:layout="@layout/fragment_my_addresses">
+        <action
+            android:id="@+id/action_myAddressesFragment_to_editAddressesFragment"
+            app:destination="@id/editAddressesFragment" />
+        <action
+            android:id="@+id/action_myAddressesFragment_to_addAddressesFragment"
+            app:destination="@id/addAddressesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mobileOtpFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.profileTab.MobileOtpFragment"
+        android:label="MobileOtpFragment"
+        tools:layout="@layout/fragment_mobile_otp"/>
+    <fragment
+        android:id="@+id/editAddressesFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.profileTab.EditAddressesFragment"
+        android:label="EditAddressesFragment"
+        tools:layout="@layout/fragment_edit_addresses"/>
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.profileTab.ChangePasswordFragment"
+        android:label="ChangePasswordFragment"
+        tools:layout="@layout/fragment_change_password"/>
+    <fragment
+        android:id="@+id/addAddressesFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.profileTab.AddAddressesFragment"
+        android:label="AddAddressesFragment"
+        tools:layout="@layout/fragment_add_addresses"/>
+    <fragment
+        android:id="@+id/discountCodeFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.cartTab.DiscountCodeFragment"
+        android:label="DiscountCodeFragment"
+        tools:layout="@layout/fragment_discount_code"/>
+    <fragment
+        android:id="@+id/followerAndFollowingFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.blogsTab.FollowerAndFollowingFragment"
+        android:label="FollowerAndFollowingFragment"
+        tools:layout="@layout/fragment_follower_and_following">
+        <argument
+            android:name="isFollower"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/scheduleTripFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.homeTab.ScheduleTripFragment"
+        android:label="ScheduleTripFragment"
+        tools:layout="@layout/fragment_schedule_trip"/>
+    <fragment
+        android:id="@+id/allRestaurantListFragment"
+        android:name="com.wss.eat_space_iz.ui.fragment.homeTab.AllRestaurantListFragment"
+        android:label="AllRestaurantListFragment"
+        tools:layout="@layout/fragment_all_restaurant_list"/>
+</navigation>

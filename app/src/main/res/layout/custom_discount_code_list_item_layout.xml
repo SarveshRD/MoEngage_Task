@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="8dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="15dp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:background="@drawable/discount_code_background"
+        >
+
+
+        <ImageView
+            android:id="@+id/iv_brand_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/citi_bank_discount_card_logo" />
+
+
+        <TextView
+            android:id="@+id/tv_discount_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/gilroy_bold"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_brand_logo"
+            app:layout_constraintTop_toTopOf="@+id/iv_brand_logo"
+            tools:text="20% Off" />
+
+        <TextView
+            android:id="@+id/tv_discount_discription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/poppins_regular"
+            android:maxLines="2"
+            android:textAlignment="viewStart"
+            android:textColor="@color/discriptions"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_brand_logo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_discount_percentage"
+            tools:text="Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur" />
+
+        <TextView
+            android:id="@+id/tv_save_more"
+            android:layout_width="126dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/save_more_bg"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="SAVEMORE"
+            android:textColor="@color/apply_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/iv_brand_logo" />
+
+        <TextView
+            android:id="@+id/tv_apply_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="@string/apply"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/apply_text"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_save_more"
+            app:layout_constraintEnd_toEndOf="@+id/tv_discount_discription"
+            app:layout_constraintTop_toTopOf="@+id/tv_save_more" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+</layout>

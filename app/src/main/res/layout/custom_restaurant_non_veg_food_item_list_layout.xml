@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/iv_food_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/restaurant_no_veg_item_icon" />
+
+    <TextView
+        android:id="@+id/tv_food_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textAlignment="viewStart"
+        android:textColor="#484848"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_food_type"
+        app:layout_constraintEnd_toStartOf="@+id/ll_cart_plus_minus"
+        app:layout_constraintStart_toEndOf="@+id/iv_food_type"
+        app:layout_constraintTop_toTopOf="@+id/iv_food_type"
+        tools:text="Garlic Bread Cheese" />
+
+    <TextView
+        android:id="@+id/tv_food_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_bold"
+        android:textAlignment="viewStart"
+        android:textColor="@color/apply_text"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_food_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_food_name"
+        tools:text="£21.98" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_cart_plus_minus"
+        android:layout_width="98dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/cart_minus_plus_bg"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/img_btn_minus"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="08dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            app:srcCompat="@drawable/cart_minus_btn_icon" />
+
+        <TextView
+            android:id="@+id/tv_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/apply_text"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/img_btn_plus"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            app:srcCompat="@drawable/cart_plus_btn_icon" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_food_add"
+        android:layout_width="98dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/cart_minus_plus_bg"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/tv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="@string/btn_add"
+            android:textColor="@color/apply_text"
+            android:textSize="18sp" />
+
+        />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_food_minus_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="ll_cart_plus_minus" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_food_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="ll_food_add" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

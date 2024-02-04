@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/my_order_food_image" />
+
+
+        <TextView
+            android:id="@+id/tv_food_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/gilroy_medium"
+            android:maxLines="1"
+            android:text="Pizza Caprina"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_order_amount"
+            app:layout_constraintStart_toEndOf="@+id/iv_food"
+            app:layout_constraintTop_toTopOf="@+id/iv_food" />
+
+        <TextView
+            android:id="@+id/tv_order_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/gilroy_bold"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/apply_text"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_food_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_food_name"
+            tools:text="£21.98" />
+
+
+        <TextView
+            android:id="@+id/tv_food_item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="2 Items"
+            android:textAlignment="viewStart"
+            android:textColor="@color/discriptions"
+            app:layout_constraintStart_toStartOf="@+id/tv_food_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_food_name" />
+
+        <ImageView
+            android:id="@+id/iv_oder_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_food_delivery_status"
+            app:layout_constraintStart_toStartOf="@+id/tv_food_item_count"
+            app:layout_constraintTop_toTopOf="@+id/tv_food_delivery_status"
+            app:srcCompat="@drawable/order_delivery_on_the_way_dots_icon" />
+
+
+        <TextView
+            android:id="@+id/tv_food_delivery_status"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_regular"
+            android:maxLines="1"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_oder_status"
+            app:layout_constraintTop_toBottomOf="@+id/tv_food_item_count"
+            tools:text="Food is on the way" />
+
+        <LinearLayout
+            android:id="@+id/ll_order_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_food_delivery_status">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_order_cancel"
+                style="@style/order_cancel_btn_style"
+                android:layout_weight="0.5"
+                android:text="@string/btn_cancel"
+                app:cornerRadius="28dp"
+                app:strokeColor="@color/white_btn"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_order_track"
+                style="@style/order_track_btn_style"
+                android:layout_weight="0.5"
+                android:text="@string/btn_track"
+                app:cornerRadius="28dp"
+                app:strokeColor="@color/white_btn"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

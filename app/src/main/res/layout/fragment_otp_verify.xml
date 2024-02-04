@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.fragment.loginSignUp.OtpVerifyFragment">
+
+        <ImageView
+            android:id="@+id/iv_otp_authentication_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.100000024"
+            app:srcCompat="@drawable/eat_space_iz_small_logo" />
+
+        <TextView
+            android:id="@+id/tv_otp_authentication_tagline"
+            style="@style/sign_all_tagline_style"
+            android:layout_marginTop="32dp"
+            android:text="@string/otp_authentication"
+            app:layout_constraintEnd_toEndOf="@+id/iv_otp_authentication_logo"
+            app:layout_constraintStart_toStartOf="@+id/iv_otp_authentication_logo"
+            app:layout_constraintTop_toBottomOf="@+id/iv_otp_authentication_logo" />
+
+        <TextView
+            android:id="@+id/tv_otp_authentication_discription"
+            style="@style/sign_all_discription_style"
+            android:layout_marginTop="24dp"
+            android:text="@string/mobile_otp_authentication_discription"
+            app:layout_constraintEnd_toEndOf="@+id/tv_otp_authentication_tagline"
+            app:layout_constraintStart_toStartOf="@+id/tv_otp_authentication_tagline"
+            app:layout_constraintTop_toBottomOf="@+id/tv_otp_authentication_tagline" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_resend_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/tv_otp_authentication_discription"
+            app:layout_constraintStart_toStartOf="@+id/tv_otp_authentication_discription"
+            app:layout_constraintTop_toBottomOf="@+id/pin_view">
+
+            <TextView
+                android:id="@+id/tv_didn_t_receive_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/gilroy_medium"
+                android:text="@string/didn_t_receive_code"
+                android:textAlignment="center"
+                android:textColor="@color/sign_discription"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_resend_otp"
+                style="@style/sign_clickable_text_style"
+                android:text="@string/resend_otp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_resend"
+                style="@style/sign_clickable_text_style"
+                android:text="@string/resend_code"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_continue"
+            style="@style/black_btn_style"
+            android:layout_marginBottom="16dp"
+            android:text="@string/btn_continue"
+            app:cornerRadius="28dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_by_signing_up"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_by_signing_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/by_signing_up_you_agree_to_our"
+            android:textAlignment="center"
+            android:textColor="@color/sign_discription"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_term_n_conditon"
+            app:layout_constraintEnd_toEndOf="@+id/tv_term_n_conditon"
+            app:layout_constraintStart_toStartOf="@+id/tv_term_n_conditon" />
+
+        <TextView
+            android:id="@+id/tv_term_n_conditon"
+            style="@style/sign_clickable_text_style"
+            android:layout_marginBottom="32dp"
+            android:text="@string/terms_and_conditions"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.goodiebag.pinview.Pinview
+            android:id="@+id/pin_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            app:cursorVisible="false"
+            app:forceKeyboard="false"
+            app:hint="0"
+            app:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_otp_authentication_discription"
+            app:password="false"
+            app:pinBackground="@drawable/pin_view_bg"
+            app:pinHeight="55dp"
+            app:pinLength="4"
+            app:pinWidth="55dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

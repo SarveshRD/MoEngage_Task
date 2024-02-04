@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp">
+
+        <TextView
+            android:id="@+id/tv_delete_item_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="Food"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_delete_item_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="Beverages"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_delete_item_heading"
+            app:layout_constraintStart_toStartOf="@+id/tv_delete_item_heading"
+            app:layout_constraintTop_toBottomOf="@+id/tv_delete_item_heading" />
+
+
+        <TextView
+            android:id="@+id/tv_delete_item_desc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="Hygiene Essentials"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_delete_item_desc"
+            app:layout_constraintStart_toStartOf="@+id/tv_delete_item_desc"
+            tools:layout_editor_absoluteY="90dp" />
+
+
+        <TextView
+            android:id="@+id/tv_delete_item_desc3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="Pooja Daily Needs"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_delete_item_desc2"
+            app:layout_constraintStart_toStartOf="@+id/tv_delete_item_desc2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_delete_item_desc2" />
+
+        <TextView
+            android:id="@+id/tv_delete_item_desc4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="Electronic Items"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_delete_item_desc3"
+            app:layout_constraintStart_toStartOf="@+id/tv_delete_item_desc3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_delete_item_desc3" />
+
+        <View
+            android:id="@+id/divider_item"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/ll_yes_no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_yes_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_delete_item_desc">
+
+
+            <TextView
+                android:id="@+id/tv_no"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="0.5"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center"
+                android:text="No"
+                android:textAlignment="center"
+                android:textColor="@color/main_color"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/divider_yes_no"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="?android:attr/listDivider"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="0.5"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center"
+                android:text="Yes"
+                android:textAlignment="center"
+                android:textColor="@color/main_color"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

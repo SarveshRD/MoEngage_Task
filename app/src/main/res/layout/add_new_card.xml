@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_color">
+
+    <include
+        android:id="@+id/add_new_card_toolbar"
+        layout="@layout/profile_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_card_number"
+        style="@style/et_tittle_style"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/card_number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_card_toolbar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_card_number"
+        style="@style/OutlinedRoundedBox"
+        android:layout_marginTop="4dp"
+        app:endIconMode="clear_text"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_card_number">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="1853 4158 3488 3515"
+            android:inputType="number"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:textColorHint="@color/black_opacity_50" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_cardholder_name"
+        style="@style/et_tittle_style"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/cardholder_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_card_number" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_cardholder_name"
+        style="@style/OutlinedRoundedBox"
+        android:layout_marginTop="4dp"
+        app:endIconMode="clear_text"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cardholder_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_cardholder_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Chris Martin"
+            android:inputType="textPersonName"
+            android:maxLength="32"
+            android:maxLines="1"
+            android:textColorHint="@color/black_opacity_50" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tv_expiry_date"
+        style="@style/et_tittle_style"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/expiry_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_cardholder_name" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_expiry_date"
+        style="@style/OutlinedRoundedBox"
+        android:layout_marginEnd="08dp"
+        android:layout_marginTop="4dp"
+        app:endIconMode="clear_text"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_expiry_date">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_expiry_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="1/25"
+            android:inputType="textPersonName"
+            android:maxLength="32"
+            android:maxLines="1"
+            android:textColorHint="@color/black_opacity_50" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_cvv"
+        style="@style/et_tittle_style"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/cvv"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/til_cardholder_name" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_cvv"
+        style="@style/OutlinedRoundedBox"
+        android:layout_marginStart="08dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="4dp"
+        app:endIconMode="clear_text"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@+id/til_cardholder_name"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cvv">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_cvv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="1/25"
+            android:inputType="textPersonName"
+            android:maxLength="32"
+            android:maxLines="1"
+            android:textColorHint="@color/black_opacity_50" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:checked="true"
+        android:text="@string/securely_save_card_details"
+        app:layout_constraintStart_toStartOf="@+id/til_expiry_date"
+        app:layout_constraintTop_toBottomOf="@+id/til_expiry_date">
+
+    </com.google.android.material.checkbox.MaterialCheckBox>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_proceed_to_pay"
+        style="@style/black_btn_style"
+        android:layout_marginBottom="32dp"
+        android:text="@string/btn_proceed_to_pay"
+        app:cornerRadius="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

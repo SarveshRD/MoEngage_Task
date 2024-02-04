@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_order_date"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="16dp"
+    tools:text="28 Feb 2021"
+    android:textColor="@color/black"
+    android:textSize="16sp"
+    android:fontFamily="@font/gilroy_medium"
+    android:textAlignment="viewStart">
+</TextView>

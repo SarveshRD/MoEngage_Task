@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="8dp"
+        app:cardElevation="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcv_favourites_food_img"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/main_bg_color"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_favourites_food"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/my_favourites_food_image" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <ImageView
+                android:id="@+id/iv_favourites"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/mcv_favourites_food_img"
+                app:layout_constraintTop_toTopOf="@+id/mcv_favourites_food_img"
+                app:srcCompat="@drawable/favorite_selected_icon" />
+
+
+            <TextView
+                android:id="@+id/tv_food_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/gilroy_medium"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/mcv_favourites_food_img"
+                app:layout_constraintTop_toBottomOf="@+id/mcv_favourites_food_img"
+                tools:text="Pizza Hut" />
+
+            <TextView
+                android:id="@+id/tv_restaurant_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/gilroy_medium"
+                android:textAlignment="viewStart"
+                android:textColor="@color/restaurant_address"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_food_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_food_name"
+                tools:text="Western Cuisine, London" />
+
+            <TextView
+                android:id="@+id/tv_food_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/restaurants_rating_bg"
+                android:fontFamily="@font/gilroy_medium"
+                android:text="4.5"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_restaurant_address"
+                app:layout_constraintTop_toBottomOf="@+id/tv_restaurant_address" />
+
+            <ImageView
+                android:id="@+id/iv_restaurant_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_restaurant_distance"
+                app:srcCompat="@drawable/restaurants_distance_icon" />
+
+            <ImageView
+                android:id="@+id/iv_restaurant_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_restaurant_time"
+                app:srcCompat="@drawable/delivery_time_icon" />
+
+            <TextView
+                android:id="@+id/tv_restaurant_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/gilroy_bold"
+                android:textAlignment="viewStart"
+                android:textColor="@color/restuarant_distance_time"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_restaurant_distance"
+                app:layout_constraintEnd_toStartOf="@+id/iv_restaurant_time"
+                app:layout_constraintTop_toTopOf="@+id/iv_restaurant_distance"
+                tools:text="242m" />
+
+            <TextView
+                android:id="@+id/tv_restaurant_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_bold"
+                android:textAlignment="viewStart"
+                android:textColor="@color/restuarant_distance_time"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_restaurant_time"
+                app:layout_constraintEnd_toEndOf="@+id/mcv_favourites_food_img"
+                app:layout_constraintTop_toTopOf="@+id/iv_restaurant_time"
+                tools:text="25 Min" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

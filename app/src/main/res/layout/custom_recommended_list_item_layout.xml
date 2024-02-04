@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="340dp"
+    android:layout_height="153dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="8dp"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_dish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/recommended_food_img" />
+
+        <TextView
+            android:id="@+id/tv_dish_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:maxLines="1"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_dish"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_dish"
+            app:layout_constraintTop_toTopOf="@+id/iv_dish"
+            app:layout_constraintVertical_bias="0.25"
+            tools:text="Sandwich" />
+
+        <TextView
+            android:id="@+id/tv_restaurant_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/restaurant_address"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_dish_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_dish_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dish_name"
+            tools:text="Western Cuisine, London" />
+
+        <TextView
+            android:id="@+id/tv_dish_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/gilroy_bold"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_restaurant_address"
+            app:layout_constraintStart_toStartOf="@+id/tv_restaurant_address"
+            app:layout_constraintTop_toBottomOf="@+id/tv_restaurant_address"
+            tools:text="£10.99" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

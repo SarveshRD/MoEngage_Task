@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_bg_color">
+
+        <!--    <TextView
+                android:id="@+id/tv_popular_near_you"
+                android:text="@string/popular_near_you"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/home_horizontal_rv_header_title_style" />-->
+
+        <!--<TextView
+            android:id="@+id/tv_popular_near_you_show_all"
+            android:text="@string/show_all"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_popular_near_you"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_popular_near_you"
+            style="@style/home_rv_show_all_text_style" />-->
+
+        <!--
+            app:layout_constraintTop_toBottomOf="@+id/tv_popular_near_you"-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_popular_near_you"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:itemCount="7"
+            tools:listitem="@layout/custom_popular_near_you_list_item_layout"
+            tools:ignore="MissingConstraints" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_margin="15dp"
+            android:visibility="gone"
+            android:background="@drawable/back2"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/rv_popular_near_you"
+            tools:context=".MainActivity">
+
+
+            <ImageView
+                android:id="@+id/copyLink"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/analytics" />
+
+
+            <TextView
+                android:id="@+id/linkText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="View Analytics"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
